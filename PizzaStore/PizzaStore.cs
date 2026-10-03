@@ -4,9 +4,9 @@ using Pizza;
 
 public abstract class PizzaStore
 {
-    public Pizza OrderPizza(string type)
+    public Pizza OrderPizza(PizzaType pizzaType)
     {
-        Pizza pizza = CreatePizza(type);
+        Pizza pizza = CreatePizza(pizzaType);
         pizza.Prepare();
         pizza.Bake();
         pizza.Cut();
@@ -15,5 +15,5 @@ public abstract class PizzaStore
         return pizza;
     }
 
-    protected abstract Pizza CreatePizza(string type);
+    protected abstract Pizza CreatePizza(PizzaType pizzaType);
 }

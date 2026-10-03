@@ -4,14 +4,8 @@ using Pizza;
 
 public class ChicagoPizzaStore : PizzaStore
 {
-    protected override Pizza CreatePizza(string type)
+    protected override Pizza CreatePizza(PizzaType pizzaType)
     {
-        Pizza pizza = type switch
-        {
-            "veggie" => new ChicagoStyleVeggiePizza(),
-            _ => new ChicagoStyleCheesePizza()
-        };
-
-        return pizza;
+        throw new NotImplementedException();
     }
 }
